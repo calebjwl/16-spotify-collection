@@ -5,12 +5,19 @@
         <div class="panel-block">
 
           <div class="results">
-            <div class="track">
-              <div class="track__frame">
-                <img src="http://placecera.com/100/100" alt="" class="track__media">
+            <div class="track media">
+              <div class="media-left">
+                <div class="track__frame">
+                  <img src="http://placecera.com/100/100" alt="" class="track__media">
+                </div>
               </div>
-              <h1 class="track__artist">Katy Perry</h1>
-              <p class="track__name">Firework</p>
+              <div class="media-content">
+                <h1 class="track__artist">Katy Perry</h1>
+                <p class="track__name">Firework</p>
+              </div>
+              <div class="media-right">
+                <span class="fa fa-spotify spotify"></span>
+              </div>
             </div>
           </div>
         </div>

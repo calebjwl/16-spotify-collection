@@ -5,6 +5,7 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'box-sizing';
 
 $white: hsl(0, 0%, 21%);
+$c-spotify: #5ec7af;
 
 @import 'bulma';
 @import 'font-awesome';
@@ -52,4 +53,9 @@ $white: hsl(0, 0%, 21%);
 
     color: #fff;
   }
+}
+
+.spotify {
+  color: $c-spotify;
+  font-size: 30px;
 }
