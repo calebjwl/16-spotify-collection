@@ -2,24 +2,8 @@
   <div class="app">
     <div class="page">
       <div class="panel">
-        <div class="panel-block">
-
-          <div class="results">
-            <div class="track media">
-              <div class="media-left">
-                <div class="track__frame">
-                  <img src="http://placecera.com/100/100" alt="" class="track__media">
-                </div>
-              </div>
-              <div class="media-content">
-                <h1 class="track__artist">Katy Perry</h1>
-                <p class="track__name">Firework</p>
-              </div>
-              <div class="media-right">
-                <span class="fa fa-spotify spotify"></span>
-              </div>
-            </div>
-          </div>
+        <div class="results">
+          <song-item v-for="t in tracks" v-bind:repo="t"></song-item>
         </div>
       </div>
     </div>
@@ -27,9 +11,23 @@
 </template>
 
 <script>
+import songItem from './song-item.vue';
 export default {
+  components: {
+    songItem,
+  },
+
+  created() {
+    fetch('https://api.spotify.com/v1/search?query=katy&type=track&offset=0&limit=20')
+      .then(response => response.json())
+      .then((trax) => {
+        this.songs = trax.tracks.items;
+      });
+  },
+
   data() {
     return {
+      tracks: [{ name: 'Douche fire' }],
     };
   },
 
