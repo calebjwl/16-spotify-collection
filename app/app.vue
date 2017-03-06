@@ -3,7 +3,7 @@
     <div class="section page">
       <div class="panel">
         <div class="results">
-          <song-item v-for="t in songs" v-bind:track="t"></song-item>
+          <song-item v-for="item in songs" v-bind:track="item"></song-item>
         </div>
       </div>
     </div>
