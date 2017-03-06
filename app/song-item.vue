@@ -1,19 +1,19 @@
 <template lang="html">
-  <div class="track">
-    <div class="panel-block media">
-      <div class="media-left">
-        <div class="track__frame">
-          <img src="http://placecera.com/100/100" alt="" class="track__media">
+  <div class="song-item">
+    <div class="track">
+      <div class="panel-block media">
+        <div class="media-left">
+          <img v-bind:src="track.album.images[0].url" alt="" class="track__frame track__media">
         </div>
-      </div>
 
-      <div class="media-content">
-        <h1 class="track__artist">Ketty purry</h1>
-        <p class="track__name">Firework</p>
-      </div>
+        <div class="media-content">
+          <h1 class="track__artist">{{ track.artists[0].name }}</h1>
+          <p class="track__name">{{ track.name }}</p>
+        </div>
 
-      <div class="media-right">
-        <span class="fa fa-spotify spotify"></span>
+        <div class="media-right">
+          <a v-bind:href="track.external_urls.spotify" class="fa fa-spotify spotify"></a>
+        </div>
       </div>
     </div>
   </div>

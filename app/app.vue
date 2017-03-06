@@ -1,9 +1,9 @@
 <template lang="html">
   <div class="app">
-    <div class="page">
+    <div class="section page">
       <div class="panel">
         <div class="results">
-          <song-item v-for="t in tracks" v-bind:repo="t"></song-item>
+          <song-item v-for="t in songs" v-bind:track="t"></song-item>
         </div>
       </div>
     </div>
@@ -18,7 +18,7 @@ export default {
   },
 
   created() {
-    fetch('https://api.spotify.com/v1/search?query=katy&type=track&offset=0&limit=20')
+    fetch('https://api.spotify.com/v1/search?query=chance&type=track&offset=0&limit=20')
       .then(response => response.json())
       .then((trax) => {
         this.songs = trax.tracks.items;
@@ -27,7 +27,12 @@ export default {
 
   data() {
     return {
-      tracks: [{ name: 'Douche fire' }],
+      songs: [{
+        artist: [{
+          name: 'CHANCE',
+        }],
+        name: 'Favorite Song',
+      }]
     };
   },
 
