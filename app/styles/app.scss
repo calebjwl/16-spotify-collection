@@ -11,9 +11,6 @@ $c-spotify: #5ec7af;
 @import 'font-awesome';
 
 .page {
-  height: 100vh;
-  overflow: hidden;
-
   display: flex;
   flex-direction: column;
 }
@@ -21,6 +18,7 @@ $c-spotify: #5ec7af;
 .panel {
   display: flex;
   flex-direction: column;
+  height: 50vh;
 
   &-block {
     color: #fff;
@@ -55,7 +53,38 @@ $c-spotify: #5ec7af;
   }
 }
 
+.media-right {
+  display: flex;
+  align-items: center;
+}
+
+.link-text {
+  display: none;
+}
+
 .spotify {
+  margin: 0.5rem;
   color: $c-spotify;
   font-size: 30px;
+
+  &:hover {
+    color: rgba($c-spotify, 0.6);
+  }
+
+  &:hover + .link-text {
+    display: block;
+  }
+}
+
+.search {
+  display: flex;
+
+  &-bar {
+    width: 90%;
+    padding: 0.5rem;
+  }
+
+  &-submit {
+    width: 10%;
+  }
 }

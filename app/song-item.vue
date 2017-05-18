@@ -12,6 +12,7 @@
         </div>
 
         <div class="media-right">
+          <p class="link-text">Listen on Spotify</p>
           <a v-bind:href="track.external_urls.spotify" class="fa fa-spotify spotify"></a>
         </div>
       </div>
