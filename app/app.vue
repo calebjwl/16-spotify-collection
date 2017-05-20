@@ -24,10 +24,6 @@ export default {
     songItem,
   },
 
-  created() {
-    this.searchForTitle('Chance');
-  },
-
   data() {
     return {
       songs: []
