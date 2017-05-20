@@ -1,5 +1,8 @@
 <template lang="html">
   <div class="app">
+    <div class="logo">
+      <img src="/images/logo.png">
+    </div>
     <div class="section page">
       <form class="search" v-on:submit.prevent="searchForTitle(name)">
         <input v-model="name" type="text" class="search-bar" placeholder="Search...">
@@ -22,7 +25,7 @@ export default {
   },
 
   created() {
-    this.searchForTitle('Foo Fighters');
+    this.searchForTitle('Chance');
   },
 
   data() {

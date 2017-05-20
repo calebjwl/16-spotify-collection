@@ -5,7 +5,7 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'box-sizing';
 
 $white: hsl(0, 0%, 21%);
-$c-spotify: #5ec7af;
+$c-spotify: #1ed760;
 
 @import 'bulma';
 @import 'font-awesome';
@@ -13,6 +13,14 @@ $c-spotify: #5ec7af;
 .page {
   display: flex;
   flex-direction: column;
+  min-width: 40rem;
+  max-width: 60rem;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 30rem;
+  margin: 0.5rem auto;
 }
 
 .panel {
@@ -62,18 +70,10 @@ $c-spotify: #5ec7af;
   display: none;
 }
 
-.spotify {
+.play {
+  display: none;
   margin: 0.5rem;
-  color: $c-spotify;
   font-size: 30px;
-
-  &:hover {
-    color: rgba($c-spotify, 0.6);
-  }
-
-  &:hover + .link-text {
-    display: block;
-  }
 }
 
 .search {
@@ -81,10 +81,22 @@ $c-spotify: #5ec7af;
 
   &-bar {
     width: 90%;
-    padding: 0.5rem;
+    padding: 1rem;
+    font-size: 2rem;
   }
 
   &-submit {
     width: 10%;
+    border: none;
+  }
+}
+
+.song-item {
+  &:hover {
+    background: rgba(#000, 0.2);
+  }
+
+  &:hover .play {
+    display: block;
   }
 }
